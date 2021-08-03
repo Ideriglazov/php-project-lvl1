@@ -13,6 +13,7 @@ if (file_exists($autoloadPath1)) {
 }
 require_once 'src/Engine.php';
 \engine\greet();
+line("Answer \"yes\" if the number is even, otherwise answer \"no\".\n");
 for ($i=0;$i<3;$i++) {
     $num = mt_rand();
     echo "Question: ".$num."\n";

@@ -4,14 +4,13 @@ namespace engine;
 use function cli\line;
 use function cli\prompt;
 
-function greet() {
+function greet() { //greeting function called at the start of every game
     line('Welcome to the Brain Games!');
     global $name;
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
-    line("Answer \"yes\" if the number is even, otherwise answer \"no\".\n");
 }
-function checkAnswer($parameter,$answer,$correctAnswer) {
+function checkAnswer($parameter,$answer,$correctAnswer) { //function called in every game to check the given answer for correctness
         if (!$parameter) {
             echo "'$answer' is wrong answer ;(. Correct answer was $correctAnswer. Let's try again, $name!\n";
             die();
@@ -21,7 +20,7 @@ function checkAnswer($parameter,$answer,$correctAnswer) {
         }
 
 }
-function checkParity($num,$ans) {
+function checkParity($num,$ans) { //function called in brain-even game to check if the given number is even or odd
     if ($num%2 > 0) { //if the number is odd
         if ($ans == 'no') {
             return true;
@@ -44,20 +43,32 @@ function checkParity($num,$ans) {
     }
 }
 
-/*
-for ($i = 0;$i < 3;$i++) {
-    $num = mt_rand();
-    echo "Question: ".$num."\n";
-    $answer = prompt('Your answer: ');
-    if (checkParity($num,$answer)==false) {
-        echo "'$answer' is wrong answer ;(. Correct answer was $correctAnswer. Let's try again, $name!\n";
-        break;
+
+function checkCalculation($expressionResult,$answer) { //function called in brain-calc game to check if the expression result matches the given answer
+    if ($expressionResult == $answer) {
+        return true;
     }
     else {
-        echo "Correct!\n";
+        return false;
     }
 }
-if ($i == 3) {
-    echo "Congratulations, ".$name."!\n";
+function mathExpression() { //function used in brain-calc game to generate a random mathematical expression
+    $rand1 = rand(0, 9);
+    $rand2 = rand(0, 9);
+    $operator = array('*', '+', '-');
+    $randoperator = $operator[rand(0, 2)];
+    switch ($randoperator) {
+        case "+":
+            $finalvalue = $rand1 + $rand2;
+            break;
+        case "-":
+            $finalvalue = $rand1 - $rand2;
+            break;
+        case "*":
+            $finalvalue = $rand1 * $rand2;
+            break;
+    }
+    $string = $rand1 . $randoperator . $rand2 . '=' . $finalvalue;
+
+    return array($rand1,$rand2,$randoperator,$finalvalue);
 }
-*/
