@@ -44,7 +44,7 @@ function checkParity($num,$ans) { //function called in brain-even game to check 
 }
 
 
-function checkCalculation($expressionResult,$answer) { //function called in brain-calc game to check if the expression result matches the given answer
+function checkCalculation($expressionResult,$answer) { //function called in brain-calc and brain-gcd games to check if the expression result matches the given answer
     if ($expressionResult == $answer) {
         return true;
     }
@@ -71,4 +71,16 @@ function mathExpression() { //function used in brain-calc game to generate a ran
     $string = $rand1 . $randoperator . $rand2 . '=' . $finalvalue;
 
     return array($rand1,$rand2,$randoperator,$finalvalue);
+}
+function commonDivisor($num1,$num2) {
+    $num3 = $num2;
+    while($num3 > 0 ) {
+        $num3 = ($num1 % $num2);
+        if ($num3 == 0 ) {
+            return $num2;
+        }
+        $num1 = $num2;
+        $num2 = $num3;
+    }
+    return null;
 }
