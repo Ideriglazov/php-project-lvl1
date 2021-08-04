@@ -19,7 +19,7 @@ for ($i=0;$i<3;$i++) {
     echo "Question: ".$num."\n";
     $answer = prompt('Your answer: ');
     $parity = checkParity($num,$answer);
-    @\engine\checkAnswer($parity,$answer,$correctAnswer);
+    @\engine\checkAnswer($parity,$answer,$correctAnswer,$name);
 }
 if ($i == 3) {
     echo "Congratulations, ".$name."!\n";

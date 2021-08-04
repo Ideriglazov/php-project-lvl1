@@ -10,7 +10,7 @@ function greet() { //greeting function called at the start of every game
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
 }
-function checkAnswer($parameter,$answer,$correctAnswer) { //function called in every game to check the given answer for correctness
+function checkAnswer($parameter,$answer,$correctAnswer,$name) { //function called in every game to check the given answer for correctness
         if (!$parameter) {
             echo "'$answer' is wrong answer ;(. Correct answer was $correctAnswer. Let's try again, $name!\n";
             die();
@@ -44,7 +44,7 @@ function checkParity($num,$ans) { //function called in brain-even game to check 
 }
 
 
-function checkCalculation($expressionResult,$answer) { //function called in brain-calc and brain-gcd games to check if the expression result matches the given answer
+function checkCalculation($expressionResult,$answer) { //function called in brain-calc, brain-gcd and brain-progression games to check if the expression result matches the given answer
     if ($expressionResult == $answer) {
         return true;
     }

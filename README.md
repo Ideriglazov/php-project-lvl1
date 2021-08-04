@@ -3,5 +3,6 @@
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 ![make-lint](https://github.com/Ideriglazov/php-project-lvl1/actions/workflows/make-lint.yml/badge.svg)
 https://asciinema.org/a/bh0VjxsSzk3tTOSnbcShuzgJm
-https://asciinema.org/a/lXOueLpzGndHM5wL7n11MASzR
-https://asciinema.org/a/beCTOzytxTcax6u94fgg6ja8D
+https://asciinema.org/a/7b0I3ZCcc141X5DBouxe36Xoc
+https://asciinema.org/a/aOHRo2hoqZEpqyQ1rkAwd8FNK
+https://asciinema.org/a/roylEy2ayHBLSqUrWEQeHUtR7

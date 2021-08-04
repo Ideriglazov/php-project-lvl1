@@ -29,7 +29,7 @@ for ($i=0;$i<3;$i++) {
     $expressionResult = eval("return $expression;");
     $answer = prompt('Your answer: ');
     $result = checkCalculation($expressionResult,$answer);
-    @\engine\checkAnswer($result,$answer,$correctAnswer);
+    @\engine\checkAnswer($result,$answer,$correctAnswer,$name);
 }
 if ($i == 3) {
     echo "Congratulations, ".$name."!\n";
