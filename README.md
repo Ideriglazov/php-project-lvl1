@@ -4,3 +4,4 @@
 ![make-lint](https://github.com/Ideriglazov/php-project-lvl1/actions/workflows/make-lint.yml/badge.svg)
 https://asciinema.org/a/bh0VjxsSzk3tTOSnbcShuzgJm
 https://asciinema.org/a/lXOueLpzGndHM5wL7n11MASzR
+https://asciinema.org/a/beCTOzytxTcax6u94fgg6ja8D
