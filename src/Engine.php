@@ -2,7 +2,6 @@
 
 namespace engine;
 
-//use function Brain\Games\Cli\checkParity;
 use function cli\line;
 use function cli\prompt;
 
@@ -15,32 +14,11 @@ function greet() //greeting function called at the start of every game
 }
 function checkAnswer($parameter, $answer, $correctAnswer, $name)
 {
-
     if (!$parameter) {
         echo "'$answer' is wrong answer ;(. Correct answer was $correctAnswer. Let's try again, $name!\n";
             die();
     } else {
             echo "Correct!\n";
-    }
-}
-function checkParity($num, $ans) //function called in brain-even game to check if the given number is even or odd
-{
-    if ($num % 2 > 0) { //if the number is odd
-        if ($ans == 'no') {
-            return true;
-        } else {
-            global $correctAnswer;
-            $correctAnswer = 'no';
-            return false;
-        }
-    } else { // if the number is even
-        if ($ans == 'yes') {
-            return true;
-        } else {
-            global $correctAnswer;
-            $correctAnswer = 'yes';
-            return false;
-        }
     }
 }
 function checkCalculation($expressionResult, $answer)
