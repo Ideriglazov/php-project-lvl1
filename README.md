@@ -43,17 +43,19 @@ CONTENTS OF THIS FILE
  ----------
  
  Brain-even
- <script id="asciicast-bh0VjxsSzk3tTOSnbcShuzgJm" src="https://asciinema.org/a/bh0VjxsSzk3tTOSnbcShuzgJm.js" async></script>
+ [![asciicast](https://asciinema.org/a/bh0VjxsSzk3tTOSnbcShuzgJm.svg)](https://asciinema.org/a/bh0VjxsSzk3tTOSnbcShuzgJm)
+
 
  Brain-calc
- <script id="asciicast-7b0I3ZCcc141X5DBouxe36Xoc" src="https://asciinema.org/a/7b0I3ZCcc141X5DBouxe36Xoc.js" async></script>
+ [![asciicast](https://asciinema.org/a/7b0I3ZCcc141X5DBouxe36Xoc.svg)](https://asciinema.org/a/7b0I3ZCcc141X5DBouxe36Xoc)
  
  Greatest Common Divisor
- <script id="asciicast-aOHRo2hoqZEpqyQ1rkAwd8FNK" src="https://asciinema.org/a/aOHRo2hoqZEpqyQ1rkAwd8FNK.js" async></script>
+ [![asciicast](https://asciinema.org/a/aOHRo2hoqZEpqyQ1rkAwd8FNK.svg)](https://asciinema.org/a/aOHRo2hoqZEpqyQ1rkAwd8FNK)
+ 
  
  Brain-prime
- <script id="asciicast-0RmIgJaVFEiqiTvSSC8vnW1lV" src="https://asciinema.org/a/0RmIgJaVFEiqiTvSSC8vnW1lV.js" async></script>
  [![asciicast](https://asciinema.org/a/0RmIgJaVFEiqiTvSSC8vnW1lV.svg)](https://asciinema.org/a/0RmIgJaVFEiqiTvSSC8vnW1lV)
+
  
  Brain-progression
- <script id="asciicast-0RmIgJaVFEiqiTvSSC8vnW1lV" src="https://asciinema.org/a/0RmIgJaVFEiqiTvSSC8vnW1lV.js" async></script>
+ [![asciicast](https://asciinema.org/a/roylEy2ayHBLSqUrWEQeHUtR7.svg)](https://asciinema.org/a/roylEy2ayHBLSqUrWEQeHUtR7)
