@@ -23,18 +23,4 @@ function checkAnswer($parameter, $answer, $correctAnswer, $name)
 }
 
 
-function primeNumber($num)
-{
-    $v = 1;
-    for ($i = 2; $i <= $num / 2; $i++) {
-        $v = $num % $i;
-        if ($v == 0) {
-            break;
-        }
-    }
-    if ($v == 0 || $num == 1) {
-        return 'no';
-    } else {
-        return 'yes';
-    }
-}
+
