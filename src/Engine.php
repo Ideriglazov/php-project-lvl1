@@ -21,35 +21,8 @@ function checkAnswer($parameter, $answer, $correctAnswer, $name)
             echo "Correct!\n";
     }
 }
-function checkCalculation($expressionResult, $answer)
-{
-    if ($expressionResult == $answer) {
-        return true;
-    } else {
-        return false;
-    }
-}
-function mathExpression() //function used in brain-calc game to generate a random mathematical expression
-{
-    $rand1 = rand(0, 9);
-    $rand2 = rand(0, 9);
-    $operator = array('*', '+', '-');
-    $randoperator = $operator[rand(0, 2)];
-    switch ($randoperator) {
-        case "+":
-            $finalvalue = $rand1 + $rand2;
-            break;
-        case "-":
-            $finalvalue = $rand1 - $rand2;
-            break;
-        case "*":
-            $finalvalue = $rand1 * $rand2;
-            break;
-    }
-    $string = $rand1 . $randoperator . $rand2 . '=' . $finalvalue;
 
-    return array($rand1,$rand2,$randoperator,$finalvalue);
-}
+
 function commonDivisor($num1, $num2)
 {
     $num3 = $num2;
