@@ -1,24 +1,23 @@
 <?php
+
 namespace Brain\Games\Calc;
 
 use function cli\line;
 use function cli\prompt;
 
-$autoloadPath1 = __DIR__ . '/../../../autoload.php';
-$autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
-$autoloadPath3 = __DIR__ . '/../../vendor/autoload.php';
-if (file_exists($autoloadPath1)) {
-    require_once $autoloadPath1;
-} else if (file_exists($autoloadPath2)) {
-    require_once $autoloadPath2;
-}
-else {
-    require_once $autoloadPath3;
-}
-require_once dirname(__FILE__).'/../../src/Engine.php';
-
 function calc($name)
 {
+    $autoloadPath1 = __DIR__ . '/../../../autoload.php';
+    $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
+    $autoloadPath3 = __DIR__ . '/../../vendor/autoload.php';
+    if (file_exists($autoloadPath1)) {
+        require_once $autoloadPath1;
+    } elseif (file_exists($autoloadPath2)) {
+        require_once $autoloadPath2;
+    } else {
+        require_once $autoloadPath3;
+    }
+    require_once dirname(__FILE__) . '/../../src/Engine.php';
     for ($i = 0; $i < 3; $i++) {
         line("What is the result of the expression?\n");
         $arrExpression = mathExpression();
@@ -42,6 +41,17 @@ function calc($name)
 
 function mathExpression()
 {
+    $autoloadPath1 = __DIR__ . '/../../../autoload.php';
+    $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
+    $autoloadPath3 = __DIR__ . '/../../vendor/autoload.php';
+    if (file_exists($autoloadPath1)) {
+        require_once $autoloadPath1;
+    } elseif (file_exists($autoloadPath2)) {
+        require_once $autoloadPath2;
+    } else {
+        require_once $autoloadPath3;
+    }
+    require_once dirname(__FILE__) . '/../../src/Engine.php';
     $rand1 = rand(0, 9);
     $rand2 = rand(0, 9);
     $operator = array('*', '+', '-');
@@ -64,6 +74,17 @@ function mathExpression()
 
 function checkCalculation($expressionResult, $answer)
 {
+    $autoloadPath1 = __DIR__ . '/../../../autoload.php';
+    $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
+    $autoloadPath3 = __DIR__ . '/../../vendor/autoload.php';
+    if (file_exists($autoloadPath1)) {
+        require_once $autoloadPath1;
+    } elseif (file_exists($autoloadPath2)) {
+        require_once $autoloadPath2;
+    } else {
+        require_once $autoloadPath3;
+    }
+    require_once dirname(__FILE__) . '/../../src/Engine.php';
     if ($expressionResult == $answer) {
         return true;
     } else {

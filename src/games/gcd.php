@@ -1,24 +1,23 @@
 <?php
+
 namespace Brain\Games\gcd;
 
 use function cli\line;
 use function cli\prompt;
 
-$autoloadPath1 = __DIR__ . '/../../../autoload.php';
-$autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
-$autoloadPath3 = __DIR__ . '/../../vendor/autoload.php';
-if (file_exists($autoloadPath1)) {
-    require_once $autoloadPath1;
-} else if (file_exists($autoloadPath2)) {
-    require_once $autoloadPath2;
-}
-else {
-    require_once $autoloadPath3;
-}
-require_once dirname(__FILE__).'/../../src/Engine.php';
-
 function gcd($name)
 {
+    $autoloadPath1 = __DIR__ . '/../../../autoload.php';
+    $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
+    $autoloadPath3 = __DIR__ . '/../../vendor/autoload.php';
+    if (file_exists($autoloadPath1)) {
+        require_once $autoloadPath1;
+    } elseif (file_exists($autoloadPath2)) {
+        require_once $autoloadPath2;
+    } else {
+        require_once $autoloadPath3;
+    }
+    require_once dirname(__FILE__) . '/../../src/Engine.php';
     for ($i = 0; $i < 3; $i++) {
         line("Find the greatest common divisor of given numbers.\n");
         $num1 = mt_rand(0, 1000);
@@ -36,6 +35,17 @@ function gcd($name)
 
 function commonDivisor($num1, $num2)
 {
+    $autoloadPath1 = __DIR__ . '/../../../autoload.php';
+    $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
+    $autoloadPath3 = __DIR__ . '/../../vendor/autoload.php';
+    if (file_exists($autoloadPath1)) {
+        require_once $autoloadPath1;
+    } elseif (file_exists($autoloadPath2)) {
+        require_once $autoloadPath2;
+    } else {
+        require_once $autoloadPath3;
+    }
+    require_once dirname(__FILE__) . '/../../src/Engine.php';
     $num3 = $num2;
     while ($num3 > 0) {
         $num3 = ($num1 % $num2);
@@ -50,6 +60,17 @@ function commonDivisor($num1, $num2)
 
 function checkCalculation($expressionResult, $answer)
 {
+    $autoloadPath1 = __DIR__ . '/../../../autoload.php';
+    $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
+    $autoloadPath3 = __DIR__ . '/../../vendor/autoload.php';
+    if (file_exists($autoloadPath1)) {
+        require_once $autoloadPath1;
+    } elseif (file_exists($autoloadPath2)) {
+        require_once $autoloadPath2;
+    } else {
+        require_once $autoloadPath3;
+    }
+    require_once dirname(__FILE__) . '/../../src/Engine.php';
     if ($expressionResult == $answer) {
         return true;
     } else {
