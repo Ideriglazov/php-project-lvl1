@@ -29,8 +29,8 @@ CONTENTS OF THIS FILE
  * make install
  * make validate
  
-   LAUNCH
-   ------
+ LAUNCH
+ ------
    
  Every game can be launched separately by running its own starting command from the root directory:
  * make brain-even
@@ -53,6 +53,7 @@ CONTENTS OF THIS FILE
  
  Brain-prime
  <script id="asciicast-0RmIgJaVFEiqiTvSSC8vnW1lV" src="https://asciinema.org/a/0RmIgJaVFEiqiTvSSC8vnW1lV.js" async></script>
+ [![asciicast](https://asciinema.org/a/0RmIgJaVFEiqiTvSSC8vnW1lV.svg)](https://asciinema.org/a/0RmIgJaVFEiqiTvSSC8vnW1lV)
  
  Brain-progression
  <script id="asciicast-0RmIgJaVFEiqiTvSSC8vnW1lV" src="https://asciinema.org/a/0RmIgJaVFEiqiTvSSC8vnW1lV.js" async></script>
