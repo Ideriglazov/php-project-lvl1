@@ -5,7 +5,7 @@ namespace engine;
 use function cli\line;
 use function cli\prompt;
 
-function greet() //greeting function called at the start of every game
+function greet()
 {
     line('Welcome to the Brain Games!');
     global $name;
@@ -21,6 +21,3 @@ function checkAnswer($parameter, $answer, $correctAnswer, $name)
             echo "Correct!\n";
     }
 }
-
-
-
