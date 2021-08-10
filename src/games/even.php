@@ -16,6 +16,7 @@ else {
     require_once $autoloadPath3;
 }
 require_once dirname(__FILE__).'/../../src/Engine.php';
+
 function parity($name)
 {
     line("Answer \"yes\" if the number is even, otherwise answer \"no\".\n");
@@ -31,6 +32,7 @@ function parity($name)
         echo "Congratulations, " . $name . "!\n";
     }
 }
+
 function checkParityBool($num, $ans)
 {
     if ($num % 2 > 0) {
@@ -51,6 +53,7 @@ function checkParityBool($num, $ans)
         }
     }
 }
+
 function checkParityString($num, $ans)
 {
     if ($num % 2 > 0) {

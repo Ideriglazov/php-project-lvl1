@@ -16,6 +16,7 @@ else {
     require_once $autoloadPath3;
 }
 require_once dirname(__FILE__).'/../../src/Engine.php';
+
 function progression($name)
 {
     for ($i = 0; $i < 3; $i++) {
@@ -46,6 +47,7 @@ function progression($name)
         echo "Congratulations, " . $name . "!\n";
     }
 }
+
 function checkCalculation($expressionResult, $answer)
 {
     if ($expressionResult == $answer) {

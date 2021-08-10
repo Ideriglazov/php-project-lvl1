@@ -16,6 +16,7 @@ else {
     require_once $autoloadPath3;
 }
 require_once dirname(__FILE__).'/../../src/Engine.php';
+
 function gcd($name)
 {
     for ($i = 0; $i < 3; $i++) {
@@ -32,6 +33,7 @@ function gcd($name)
         echo "Congratulations, " . $name . "!\n";
     }
 }
+
 function commonDivisor($num1, $num2)
 {
     $num3 = $num2;
@@ -45,6 +47,7 @@ function commonDivisor($num1, $num2)
     }
     return null;
 }
+
 function checkCalculation($expressionResult, $answer)
 {
     if ($expressionResult == $answer) {

@@ -16,6 +16,7 @@ else {
     require_once $autoloadPath3;
 }
 require_once dirname(__FILE__).'/../../src/Engine.php';
+
 function calc($name)
 {
     for ($i = 0; $i < 3; $i++) {
@@ -38,6 +39,7 @@ function calc($name)
         echo "Congratulations, " . $name . "!\n";
     }
 }
+
 function mathExpression()
 {
     $rand1 = rand(0, 9);
@@ -59,6 +61,7 @@ function mathExpression()
 
     return array($rand1,$rand2,$randoperator,$finalvalue);
 }
+
 function checkCalculation($expressionResult, $answer)
 {
     if ($expressionResult == $answer) {

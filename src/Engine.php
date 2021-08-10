@@ -12,6 +12,7 @@ function greet()
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
 }
+
 function checkAnswer($parameter, $answer, $correctAnswer, $name)
 {
     if (!$parameter) {
