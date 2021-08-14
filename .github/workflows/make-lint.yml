@@ -6,5 +6,3 @@ jobs:
     steps:
       - name: my-step
         run: make lint
-        with:
-          php_codesniffer: true
