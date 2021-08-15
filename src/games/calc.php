@@ -5,7 +5,7 @@ namespace Brain\Games\Calc;
 use function cli\line;
 use function cli\prompt;
 
-function calc($name)
+function brainCalc(string $name):void
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
@@ -18,6 +18,7 @@ function calc($name)
         require_once $autoloadPath3;
     }
     require_once dirname(__FILE__) . '/../../src/Engine.php';
+    $i = 0;
     for ($i = 0; $i < 3; $i++) {
         line("What is the result of the expression?\n");
         $arrExpression = mathExpression();
@@ -32,14 +33,14 @@ function calc($name)
         $expressionResult = eval("return $expression;");
         $answer = prompt('Your answer: ');
         $result = checkCalculation($expressionResult, $answer);
-        @\engine\checkAnswer($result, $answer, $correctAnswer, $name);
+        @\engine\checkAnswerInt($result, $answer, $correctAnswer, $name);
     }
     if ($i == 3) {
         echo "Congratulations, " . $name . "!\n";
     }
 }
 
-function mathExpression()
+function mathExpression(): array
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
@@ -56,6 +57,7 @@ function mathExpression()
     $rand2 = rand(0, 9);
     $operator = array('*', '+', '-');
     $randoperator = $operator[rand(0, 2)];
+    $finalvalue = null;
     switch ($randoperator) {
         case "+":
             $finalvalue = $rand1 + $rand2;
@@ -72,7 +74,7 @@ function mathExpression()
     return array($rand1,$rand2,$randoperator,$finalvalue);
 }
 
-function checkCalculation($expressionResult, $answer)
+function checkCalculation(int $expressionResult, int $answer):bool
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';

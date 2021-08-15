@@ -5,7 +5,7 @@ namespace Brain\Games\gcd;
 use function cli\line;
 use function cli\prompt;
 
-function gcd($name)
+function gcd(string $name):void
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
@@ -18,6 +18,7 @@ function gcd($name)
         require_once $autoloadPath3;
     }
     require_once dirname(__FILE__) . '/../../src/Engine.php';
+    $i = 0;
     for ($i = 0; $i < 3; $i++) {
         line("Find the greatest common divisor of given numbers.\n");
         $num1 = mt_rand(0, 1000);
@@ -26,14 +27,14 @@ function gcd($name)
         $answer = prompt('Your answer: ');
         $correctAnswer = commonDivisor($num1, $num2);
         $booleanDivisor = checkCalculation($correctAnswer, $answer);
-        @\engine\checkAnswer($booleanDivisor, $answer, $correctAnswer, $name);
+        @\engine\checkAnswerInt($booleanDivisor, $answer, $correctAnswer, $name);
     }
     if ($i == 3) {
         echo "Congratulations, " . $name . "!\n";
     }
 }
 
-function commonDivisor($num1, $num2)
+function commonDivisor(int $num1, int $num2):int
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
@@ -55,10 +56,10 @@ function commonDivisor($num1, $num2)
         $num1 = $num2;
         $num2 = $num3;
     }
-    return null;
+    return $num2;
 }
 
-function checkCalculation($expressionResult, $answer)
+function checkCalculation(int $expressionResult, int $answer):bool
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';

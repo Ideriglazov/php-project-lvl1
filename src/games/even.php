@@ -5,7 +5,7 @@ namespace Brain\Games\Even;
 use function cli\line;
 use function cli\prompt;
 
-function parity($name)
+function parity(string $name):void
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
@@ -19,6 +19,7 @@ function parity($name)
     }
     require_once dirname(__FILE__) . '/../../src/Engine.php';
     line("Answer \"yes\" if the number is even, otherwise answer \"no\".\n");
+    $i = 0;
     for (
         $i = 0; $i < 3; $i++
     ) {
@@ -27,14 +28,14 @@ function parity($name)
         $answer = prompt('Your answer: ');
         $parity = checkParityBool($num, $answer);
         $correctAnswer = checkParityString($num, $answer);
-        @\engine\checkAnswer($parity, $answer, $correctAnswer, $name);
+        @\engine\checkAnswerString($parity, $answer, $correctAnswer, $name);
     }
     if ($i == 3) {
         echo "Congratulations, " . $name . "!\n";
     }
 }
 
-function checkParityBool($num, $ans)
+function checkParityBool(int $num, string $ans):bool
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
@@ -66,7 +67,7 @@ function checkParityBool($num, $ans)
     }
 }
 
-function checkParityString($num, $ans)
+function checkParityString(int $num, string $ans):string
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';

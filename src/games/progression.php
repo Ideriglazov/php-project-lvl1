@@ -5,7 +5,7 @@ namespace Brain\Games\Progression;
 use function cli\line;
 use function cli\prompt;
 
-function progression($name)
+function progression(string $name):void
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
@@ -18,6 +18,7 @@ function progression($name)
         require_once $autoloadPath3;
     }
     require_once dirname(__FILE__) . '/../../src/Engine.php';
+    $i = 0;
     for ($i = 0; $i < 3; $i++) {
         line("What number is missing in the progression?\n");
         $progLength = mt_rand(5, 15);
@@ -40,14 +41,14 @@ function progression($name)
         $answer = prompt('Your answer: ');
         $correctAnswer = $hiddenElementValue;
         $booleanDivisor = checkCalculation($correctAnswer, $answer);
-        @\engine\checkAnswer($booleanDivisor, $answer, $correctAnswer, $name);
+        @\engine\checkAnswerInt($booleanDivisor, $answer, $correctAnswer, $name);
     }
     if ($i == 3) {
         echo "Congratulations, " . $name . "!\n";
     }
 }
 
-function checkCalculation($expressionResult, $answer)
+function checkCalculation(int $expressionResult, string $answer):bool
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
