@@ -19,7 +19,7 @@ function brainCalc(string $name): void
     }
     require_once dirname(__FILE__) . '/../../src/Engine.php';
     $i = 0;
-    for ($i = 0; $i < 3; $i++) {
+    while ($i < 3){
         line("What is the result of the expression?\n");
         $arrExpression = mathExpression();
         $arrExpression[] = ';';
@@ -34,6 +34,9 @@ function brainCalc(string $name): void
         $answer = prompt('Your answer: ');
         $result = checkCalculation($expressionResult, $answer);
         @\engine\checkAnswerInt($result, $answer, $correctAnswer, $name);
+        if ($result > 0) {
+            $i++;
+        }
     }
     if ($i == 3) {
         echo "Congratulations, " . $name . "!\n";

@@ -19,7 +19,7 @@ function prime(string $name): void
     }
     require_once dirname(__FILE__) . '/../../src/Engine.php';
     $i = 0;
-    for ($i = 0; $i < 3; $i++) {
+    while ($i < 3) {
         line("Answer \"yes\" if given number is prime. Otherwise answer \"no\".\n");
         $num = mt_rand(0, 1000);
         echo "Question: " . $num . "\n";
@@ -27,6 +27,9 @@ function prime(string $name): void
         $correctAnswer = primeNumber($num);
         $booleanNumber = checkCalculation($correctAnswer, $answer);
         @\engine\checkAnswerString($booleanNumber, $answer, $correctAnswer, $name);
+        if ($booleanNumber) {
+            $i++;
+        }
     }
     if ($i == 3) {
         echo "Congratulations, " . $name . "!\n";

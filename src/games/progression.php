@@ -19,7 +19,7 @@ function progression(string $name): void
     }
     require_once dirname(__FILE__) . '/../../src/Engine.php';
     $i = 0;
-    for ($i = 0; $i < 3; $i++) {
+    while ($i < 3){
         line("What number is missing in the progression?\n");
         $progLength = mt_rand(5, 15);
         $increment = mt_rand(0, 100);
@@ -42,6 +42,9 @@ function progression(string $name): void
         $correctAnswer = $hiddenElementValue;
         $booleanDivisor = checkCalculation($correctAnswer, $answer);
         @\engine\checkAnswerInt($booleanDivisor, $answer, $correctAnswer, $name);
+        if ($booleanDivisor) {
+            $i++;
+        }
     }
     if ($i == 3) {
         echo "Congratulations, " . $name . "!\n";

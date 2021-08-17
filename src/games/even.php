@@ -20,15 +20,16 @@ function parity(string $name): void
     require_once dirname(__FILE__) . '/../../src/Engine.php';
     line("Answer \"yes\" if the number is even, otherwise answer \"no\".\n");
     $i = 0;
-    for (
-        $i = 0; $i < 3; $i++
-    ) {
+    while ($i < 3){
         $num = mt_rand();
         echo "Question: " . $num . "\n";
         $answer = prompt('Your answer: ');
         $parity = checkParityBool($num, $answer);
-        $correctAnswer = checkParityString($num, $answer);
+        $correctAnswer = checkParityString($num);
         @\engine\checkAnswerString($parity, $answer, $correctAnswer, $name);
+        if ($answer == $correctAnswer) {
+            $i++;
+        }
     }
     if ($i == 3) {
         echo "Congratulations, " . $name . "!\n";
@@ -67,7 +68,7 @@ function checkParityBool(int $num, string $ans): bool
     }
 }
 
-function checkParityString(int $num, string $ans): string
+function checkParityString(int $num): string
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
@@ -81,16 +82,8 @@ function checkParityString(int $num, string $ans): string
     }
     require_once dirname(__FILE__) . '/../../src/Engine.php';
     if ($num % 2 > 0) {
-        if ($ans == 'no') {
-            return 'yes';
-        } else {
-            return 'no';
-        }
-    } else {
-        if ($ans == 'yes') {
             return 'no';
         } else {
             return 'yes';
         }
-    }
 }
