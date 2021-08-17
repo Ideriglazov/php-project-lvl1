@@ -19,7 +19,7 @@ function gcd(string $name): void
     }
     require_once dirname(__FILE__) . '/../../src/Engine.php';
     $i = 0;
-    for ($i = 0; $i < 3; $i++) {
+    while ($i < 3) {
         line("Find the greatest common divisor of given numbers.\n");
         $num1 = mt_rand(0, 1000);
         $num2 = mt_rand(0, 1000);
@@ -28,6 +28,9 @@ function gcd(string $name): void
         $correctAnswer = commonDivisor($num1, $num2);
         $booleanDivisor = checkCalculation($correctAnswer, $answer);
         @\engine\checkAnswerInt($booleanDivisor, $answer, $correctAnswer, $name);
+        if ($booleanDivisor) {
+            $i++;
+        }
     }
     if ($i == 3) {
         echo "Congratulations, " . $name . "!\n";

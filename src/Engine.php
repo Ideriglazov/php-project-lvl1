@@ -37,7 +37,6 @@ function checkAnswerInt(bool $parameter, int $answer, int $correctAnswer, string
     }
     if (!$parameter) {
         echo "'$answer' is wrong answer ;(. Correct answer was $correctAnswer. Let's try again, $name!\n";
-            die();
     } else {
             echo "Correct!\n";
     }
