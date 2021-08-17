@@ -20,7 +20,7 @@ function parity(string $name): void
     require_once dirname(__FILE__) . '/../../src/Engine.php';
     line("Answer \"yes\" if the number is even, otherwise answer \"no\".\n");
     $i = 0;
-    while ($i < 3){
+    while ($i < 3) {
         $num = mt_rand();
         echo "Question: " . $num . "\n";
         $answer = prompt('Your answer: ');
@@ -83,7 +83,7 @@ function checkParityString(int $num): string
     require_once dirname(__FILE__) . '/../../src/Engine.php';
     if ($num % 2 > 0) {
             return 'no';
-        } else {
-            return 'yes';
-        }
+    } else {
+        return 'yes';
+    }
 }

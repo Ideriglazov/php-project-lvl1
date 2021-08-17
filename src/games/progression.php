@@ -19,7 +19,7 @@ function progression(string $name): void
     }
     require_once dirname(__FILE__) . '/../../src/Engine.php';
     $i = 0;
-    while ($i < 3){
+    while ($i < 3) {
         line("What number is missing in the progression?\n");
         $progLength = mt_rand(5, 15);
         $increment = mt_rand(0, 100);

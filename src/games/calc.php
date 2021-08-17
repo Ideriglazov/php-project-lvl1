@@ -19,7 +19,7 @@ function brainCalc(string $name): void
     }
     require_once dirname(__FILE__) . '/../../src/Engine.php';
     $i = 0;
-    while ($i < 3){
+    while ($i < 3) {
         line("What is the result of the expression?\n");
         $arrExpression = mathExpression();
         $arrExpression[] = ';';
