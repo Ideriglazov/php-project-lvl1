@@ -5,7 +5,7 @@ namespace Brain\Games\Even;
 use function cli\line;
 use function cli\prompt;
 
-function parity(string $name):void
+function parity(string $name): void
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
@@ -35,7 +35,7 @@ function parity(string $name):void
     }
 }
 
-function checkParityBool(int $num, string $ans):bool
+function checkParityBool(int $num, string $ans): bool
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
@@ -67,7 +67,7 @@ function checkParityBool(int $num, string $ans):bool
     }
 }
 
-function checkParityString(int $num, string $ans):string
+function checkParityString(int $num, string $ans): string
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';

@@ -23,7 +23,7 @@ function greet(): void
     line("Hello, %s!", $name);
 }
 
-function checkAnswerInt(bool $parameter, int $answer, int $correctAnswer, string $name):void
+function checkAnswerInt(bool $parameter, int $answer, int $correctAnswer, string $name): void
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
@@ -42,7 +42,7 @@ function checkAnswerInt(bool $parameter, int $answer, int $correctAnswer, string
             echo "Correct!\n";
     }
 }
-function checkAnswerString(bool $parameter, string $answer, string $correctAnswer, string $name):void
+function checkAnswerString(bool $parameter, string $answer, string $correctAnswer, string $name): void
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';

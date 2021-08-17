@@ -5,7 +5,7 @@ namespace Brain\Games\Progression;
 use function cli\line;
 use function cli\prompt;
 
-function progression(string $name):void
+function progression(string $name): void
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
@@ -48,7 +48,7 @@ function progression(string $name):void
     }
 }
 
-function checkCalculation(int $expressionResult, string $answer):bool
+function checkCalculation(int $expressionResult, string $answer): bool
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';

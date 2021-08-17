@@ -5,7 +5,7 @@ namespace Brain\Games\gcd;
 use function cli\line;
 use function cli\prompt;
 
-function gcd(string $name):void
+function gcd(string $name): void
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
@@ -34,7 +34,7 @@ function gcd(string $name):void
     }
 }
 
-function commonDivisor(int $num1, int $num2):int
+function commonDivisor(int $num1, int $num2): int
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
@@ -59,7 +59,7 @@ function commonDivisor(int $num1, int $num2):int
     return $num2;
 }
 
-function checkCalculation(int $expressionResult, int $answer):bool
+function checkCalculation(int $expressionResult, int $answer): bool
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';

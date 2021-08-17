@@ -5,7 +5,7 @@ namespace Brain\Games\Prime;
 use function cli\line;
 use function cli\prompt;
 
-function prime(string $name):void
+function prime(string $name): void
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
@@ -33,7 +33,7 @@ function prime(string $name):void
     }
 }
 
-function checkCalculation(string $expressionResult, string $answer):bool
+function checkCalculation(string $expressionResult, string $answer): bool
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
@@ -53,7 +53,7 @@ function checkCalculation(string $expressionResult, string $answer):bool
     }
 }
 
-function primeNumber(int $num):string
+function primeNumber(int $num): string
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
