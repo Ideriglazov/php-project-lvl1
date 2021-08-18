@@ -18,7 +18,7 @@ CONTENTS OF THIS FILE
  1. Brain-calc. A random mathematical expression is displayed. The user is prompted to enter an answer.
  2. Brain-even. A random number is displayed. The user is prompted to determine if the number is even or odd.
  3. Brain-gcd.  Two random numbers are displayed. The user is prompted to determine the biggest common diviser of these numbers.
- 4. Brain-prime. A random nummber is displayed. The user is prompted to determine if the number is prime or not.
+ 4. Brain-prime. A random number is displayed. The user is prompted to determine if the number is prime or not.
  5. Brain-progression. A random arithmetic progression is displayed. One number is missing. The user has to determine the missing number.
  
  INSTALLATION
