@@ -27,7 +27,7 @@ function gcd(string $name): void
         $answer = prompt('Your answer: ');
         $correctAnswer = commonDivisor($num1, $num2);
         $booleanDivisor = checkCalculation($correctAnswer, $answer);
-        @\engine\checkAnswerInt($booleanDivisor, $answer, $correctAnswer, $name);
+        @\engine\checkAnswerString($booleanDivisor, $answer, $correctAnswer, $name);
         if ($booleanDivisor) {
             $i++;
         } else {
