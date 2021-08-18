@@ -27,11 +27,12 @@ function gcd(string $name): void
         $answer = prompt('Your answer: ');
         $correctAnswer = commonDivisor($num1, $num2);
         $booleanDivisor = checkCalculation($correctAnswer, $answer);
-        @\engine\checkAnswerString($booleanDivisor, $answer, $correctAnswer, $name);
-        if ($booleanDivisor) {
-            $i++;
-        } else {
+        if (!$booleanDivisor) {
+            echo "'$answer' is wrong answer ;(. Correct answer was $correctAnswer. Let's try again, $name!\n";
             die();
+        } else {
+            echo "Correct!\n";
+            $i++;
         }
     }
     if ($i == 3) {
