@@ -30,6 +30,9 @@ function parity(string $name): void
         if ($answer == $correctAnswer) {
             $i++;
         }
+        else {
+            die();
+        }
     }
     if ($i == 3) {
         echo "Congratulations, " . $name . "!\n";

@@ -37,6 +37,9 @@ function brainCalc(string $name): void
         if ($result > 0) {
             $i++;
         }
+        else {
+            die();
+        }
     }
     if ($i == 3) {
         echo "Congratulations, " . $name . "!\n";

@@ -45,6 +45,9 @@ function progression(string $name): void
         if ($booleanDivisor) {
             $i++;
         }
+        else {
+            die();
+        }
     }
     if ($i == 3) {
         echo "Congratulations, " . $name . "!\n";

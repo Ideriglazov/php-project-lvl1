@@ -30,6 +30,9 @@ function prime(string $name): void
         if ($booleanNumber) {
             $i++;
         }
+        else {
+            die();
+        }
     }
     if ($i == 3) {
         echo "Congratulations, " . $name . "!\n";
