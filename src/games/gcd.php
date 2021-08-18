@@ -27,7 +27,7 @@ function gcd(string $name): void
         $answer = prompt('Your answer: ');
         $correctAnswer = commonDivisor($num1, $num2);
         $booleanDivisor = checkCalculation($correctAnswer, $answer);
-        @\engine\checkAnswerInt($booleanDivisor, $answer, $correctAnswer, $name);
+        @\engine\checkAnswer($booleanDivisor, $answer, $correctAnswer, $name);
         if ($booleanDivisor) {
             $i++;
         } else {
@@ -64,7 +64,7 @@ function commonDivisor(int $num1, int $num2): int
     return $num2;
 }
 
-function checkCalculation(int $expressionResult, int $answer): bool
+function checkCalculation(int $expressionResult, string $answer): bool
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';

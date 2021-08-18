@@ -26,7 +26,7 @@ function prime(string $name): void
         $answer = prompt('Your answer: ');
         $correctAnswer = primeNumber($num);
         $booleanNumber = checkCalculation($correctAnswer, $answer);
-        @\engine\checkAnswerString($booleanNumber, $answer, $correctAnswer, $name);
+        @\engine\checkAnswer($booleanNumber, $answer, $correctAnswer, $name);
         if ($booleanNumber) {
             $i++;
         } else {

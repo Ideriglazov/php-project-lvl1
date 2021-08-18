@@ -33,7 +33,7 @@ function brainCalc(string $name): void
         $expressionResult = eval("return $expression;");
         $answer = prompt('Your answer: ');
         $result = checkCalculation($expressionResult, $answer);
-        @\engine\checkAnswerInt($result, $answer, $correctAnswer, $name);
+        @\engine\checkAnswer($result, $answer, $correctAnswer, $name);
         if ($result > 0) {
             $i++;
         } else {
@@ -79,7 +79,7 @@ function mathExpression(): array
     return array($rand1,$rand2,$randoperator,$finalvalue);
 }
 
-function checkCalculation(int $expressionResult, int $answer): bool
+function checkCalculation(int $expressionResult, string $answer): bool
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
