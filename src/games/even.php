@@ -29,8 +29,7 @@ function parity(string $name): void
         @\engine\checkAnswerString($parity, $answer, $correctAnswer, $name);
         if ($answer == $correctAnswer) {
             $i++;
-        }
-        else {
+        } else {
             die();
         }
     }

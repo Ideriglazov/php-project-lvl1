@@ -44,8 +44,7 @@ function progression(string $name): void
         @\engine\checkAnswerInt($booleanDivisor, $answer, $correctAnswer, $name);
         if ($booleanDivisor) {
             $i++;
-        }
-        else {
+        } else {
             die();
         }
     }

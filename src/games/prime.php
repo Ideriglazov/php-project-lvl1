@@ -29,8 +29,7 @@ function prime(string $name): void
         @\engine\checkAnswerString($booleanNumber, $answer, $correctAnswer, $name);
         if ($booleanNumber) {
             $i++;
-        }
-        else {
+        } else {
             die();
         }
     }

@@ -36,8 +36,7 @@ function brainCalc(string $name): void
         @\engine\checkAnswerInt($result, $answer, $correctAnswer, $name);
         if ($result > 0) {
             $i++;
-        }
-        else {
+        } else {
             die();
         }
     }
