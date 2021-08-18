@@ -41,7 +41,7 @@ function progression(string $name): void
         $answer = prompt('Your answer: ');
         $correctAnswer = $hiddenElementValue;
         $booleanDivisor = checkCalculation($correctAnswer, $answer);
-        @\engine\checkAnswer($booleanDivisor, $answer, $correctAnswer, $name);
+        @\engine\checkAnswerInt($booleanDivisor, $answer, $correctAnswer, $name);
         if ($booleanDivisor) {
             $i++;
         } else {

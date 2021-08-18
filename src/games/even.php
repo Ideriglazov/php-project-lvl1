@@ -26,7 +26,7 @@ function parity(string $name): void
         $answer = prompt('Your answer: ');
         $parity = checkParityBool($num, $answer);
         $correctAnswer = checkParityString($num);
-        @\engine\checkAnswer($parity, $answer, $correctAnswer, $name);
+        @\engine\checkAnswerString($parity, $answer, $correctAnswer, $name);
         if ($answer == $correctAnswer) {
             $i++;
         } else {

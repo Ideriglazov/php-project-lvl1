@@ -33,7 +33,7 @@ function brainCalc(string $name): void
         $expressionResult = eval("return $expression;");
         $answer = prompt('Your answer: ');
         $result = checkCalculation($expressionResult, $answer);
-        @\engine\checkAnswer($result, $answer, $correctAnswer, $name);
+        @\engine\checkAnswerString($result, $answer, $correctAnswer, $name);
         if ($result > 0) {
             $i++;
         } else {
