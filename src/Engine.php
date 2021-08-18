@@ -24,7 +24,7 @@ function greet(): void
 }
 
 
-function checkAnswer(bool $parameter, string $answer, string $correctAnswer, string $name): void
+function checkAnswer(bool $parameter, string $answer, int $correctAnswer, string $name): void
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
