@@ -35,7 +35,7 @@ function greet(string $gamePath): void
         echo "Congratulations, " . $name . "!\n";
     }
 }
-function checkAnswerInt(bool $parameter, int $answer, int $correctAnswer, string $name): void
+function checkAnswerInt(bool $parameter, string $answer, int $correctAnswer, string $name): void
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
