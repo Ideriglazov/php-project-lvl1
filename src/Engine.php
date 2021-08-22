@@ -24,7 +24,9 @@ function greet(string $gamePath): void
     line("Hello, %s!", $name);
     $i = 0;
     while ($i < 3) {
-        $gamePath($name);
+        if (is_callable($gamePath($name))) {
+            $gamePath($name);
+        }
         if ($result > 0) {
             $i++;
         } else {
