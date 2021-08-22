@@ -2,5 +2,4 @@
 <?php
 require_once dirname(__FILE__).'/../src/Engine.php';
 require_once dirname(__FILE__).'/../src/games/even.php';
-\engine\greet();
-Brain\Games\Even\parity($name);
+\engine\greet('Brain\Games\Even\parity');

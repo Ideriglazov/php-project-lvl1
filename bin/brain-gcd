@@ -2,5 +2,4 @@
 <?php
 require_once dirname(__FILE__).'/../src/Engine.php';
 require_once dirname(__FILE__).'/../src/games/gcd.php';
-\engine\greet();
-Brain\Games\Gcd\gcd($name);
+\engine\greet('Brain\Games\gcd\gcd');

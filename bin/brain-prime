@@ -2,5 +2,4 @@
 <?php
 require_once dirname(__FILE__).'/../src/Engine.php';
 require_once dirname(__FILE__).'/../src/games/prime.php';
-\engine\greet();
-Brain\Games\Prime\prime($name);
+\engine\greet('Brain\Games\Prime\prime');

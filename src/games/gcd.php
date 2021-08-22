@@ -18,26 +18,15 @@ function gcd(string $name): void
         require_once $autoloadPath3;
     }
     require_once dirname(__FILE__) . '/../../src/Engine.php';
-    $i = 0;
-    while ($i < 3) {
         line("Find the greatest common divisor of given numbers.\n");
         $num1 = mt_rand(0, 1000);
         $num2 = mt_rand(0, 1000);
         echo "Question: " . $num1 . ' ' . $num2 . "\n";
         $answer = prompt('Your answer: ');
         $correctAnswer = commonDivisor($num1, $num2);
-        $booleanDivisor = checkCalculation($correctAnswer, $answer);
-        if (!$booleanDivisor) {
-            echo "'$answer' is wrong answer ;(. Correct answer was $correctAnswer. Let's try again, $name!\n";
-            die();
-        } else {
-            echo "Correct!\n";
-            $i++;
-        }
-    }
-    if ($i == 3) {
-        echo "Congratulations, " . $name . "!\n";
-    }
+        global $result;
+        $result = checkCalculation($correctAnswer, $answer);
+        @\engine\checkAnswerString($result, $answer, $correctAnswer, $name);
 }
 
 function commonDivisor(int $num1, int $num2): int

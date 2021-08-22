@@ -18,24 +18,14 @@ function prime(string $name): void
         require_once $autoloadPath3;
     }
     require_once dirname(__FILE__) . '/../../src/Engine.php';
-    $i = 0;
-    while ($i < 3) {
         line("Answer \"yes\" if given number is prime. Otherwise answer \"no\".\n");
         $num = mt_rand(0, 1000);
         echo "Question: " . $num . "\n";
         $answer = prompt('Your answer: ');
         $correctAnswer = primeNumber($num);
-        $booleanNumber = checkCalculation($correctAnswer, $answer);
-        @\engine\checkAnswerString($booleanNumber, $answer, $correctAnswer, $name);
-        if ($booleanNumber) {
-            $i++;
-        } else {
-            die();
-        }
-    }
-    if ($i == 3) {
-        echo "Congratulations, " . $name . "!\n";
-    }
+        global $result;
+        $result = checkCalculation($correctAnswer, $answer);
+        @\engine\checkAnswerString($result, $answer, $correctAnswer, $name);
 }
 
 function checkCalculation(string $expressionResult, string $answer): bool

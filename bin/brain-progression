@@ -2,5 +2,4 @@
 <?php
 require_once dirname(__FILE__).'/../src/Engine.php';
 require_once dirname(__FILE__).'/../src/games/progression.php';
-\engine\greet();
-Brain\Games\Progression\progression($name);
+\engine\greet('Brain\Games\Progression\progression');

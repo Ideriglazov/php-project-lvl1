@@ -19,23 +19,13 @@ function parity(string $name): void
     }
     require_once dirname(__FILE__) . '/../../src/Engine.php';
     line("Answer \"yes\" if the number is even, otherwise answer \"no\".\n");
-    $i = 0;
-    while ($i < 3) {
         $num = mt_rand();
         echo "Question: " . $num . "\n";
         $answer = prompt('Your answer: ');
-        $parity = checkParityBool($num, $answer);
+        global $result;
+        $result = checkParityBool($num, $answer);
         $correctAnswer = checkParityString($num);
-        @\engine\checkAnswerString($parity, $answer, $correctAnswer, $name);
-        if ($answer == $correctAnswer) {
-            $i++;
-        } else {
-            die();
-        }
-    }
-    if ($i == 3) {
-        echo "Congratulations, " . $name . "!\n";
-    }
+        @\engine\checkAnswerString($result, $answer, $correctAnswer, $name);
 }
 
 function checkParityBool(int $num, string $ans): bool

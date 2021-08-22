@@ -18,40 +18,29 @@ function progression(string $name): void
         require_once $autoloadPath3;
     }
     require_once dirname(__FILE__) . '/../../src/Engine.php';
-    $i = 0;
-    while ($i < 3) {
         line("What number is missing in the progression?\n");
         $progLength = mt_rand(5, 15);
         $increment = mt_rand(0, 100);
         $element = mt_rand(0, 100);
         $progression = [];
-        for ($x = 0; $x < $progLength; $x++) {
-            $element += $increment;
-            $progression[] = $element;
-        }
+    for ($x = 0; $x < $progLength; $x++) {
+        $element += $increment;
+        $progression[] = $element;
+    }
         $hiddenElementKey = array_rand($progression);
         $hiddenElementValue = $progression[$hiddenElementKey];
         $progression[$hiddenElementKey] = '..';
         echo "Question: ";
-        foreach ($progression as $item) {
-            echo $item . ' ';
-        }
+    foreach ($progression as $item) {
+        echo $item . ' ';
+    }
         echo "\n";
         $progression[$hiddenElementKey] = $hiddenElementValue;
         $answer = prompt('Your answer: ');
         $correctAnswer = $hiddenElementValue;
-        $booleanDivisor = checkCalculation($correctAnswer, $answer);
-        if (!$booleanDivisor) {
-            echo "'$answer' is wrong answer ;(. Correct answer was $correctAnswer. Let's try again, $name!\n";
-            die();
-        } else {
-            echo "Correct!\n";
-            $i++;
-        }
-    }
-    if ($i == 3) {
-        echo "Congratulations, " . $name . "!\n";
-    }
+        global $result;
+        $result = checkCalculation($correctAnswer, $answer);
+        @\engine\checkAnswerString($result, $answer, $correctAnswer, $name);
 }
 
 function checkCalculation(int $expressionResult, string $answer): bool

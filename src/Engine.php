@@ -5,7 +5,7 @@ namespace engine;
 use function cli\line;
 use function cli\prompt;
 
-function greet(): void
+function greet($gamePath)
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
@@ -19,10 +19,22 @@ function greet(): void
     }
     line('Welcome to the Brain Games!');
     global $name;
+    global $result;
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
+    $i = 0;
+    while ($i < 3) {
+        $gamePath($name);
+        if ($result > 0) {
+            $i++;
+        } else {
+            die();
+        }
+    }
+    if ($i == 3) {
+        echo "Congratulations, " . $name . "!\n";
+    }
 }
-
 function checkAnswerInt(bool $parameter, int $answer, int $correctAnswer, string $name): void
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';

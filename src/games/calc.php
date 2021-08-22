@@ -18,8 +18,6 @@ function brainCalc(string $name): void
         require_once $autoloadPath3;
     }
     require_once dirname(__FILE__) . '/../../src/Engine.php';
-    $i = 0;
-    while ($i < 3) {
         line("What is the result of the expression?\n");
         $arrExpression = mathExpression();
         $arrExpression[] = ';';
@@ -32,17 +30,9 @@ function brainCalc(string $name): void
         $expression = implode($arrExpression);
         $expressionResult = eval("return $expression;");
         $answer = prompt('Your answer: ');
+        global $result;
         $result = checkCalculation($expressionResult, $answer);
         @\engine\checkAnswerString($result, $answer, $correctAnswer, $name);
-        if ($result > 0) {
-            $i++;
-        } else {
-            die();
-        }
-    }
-    if ($i == 3) {
-        echo "Congratulations, " . $name . "!\n";
-    }
 }
 
 function mathExpression(): array
