@@ -40,7 +40,7 @@ function progression(string $name): void
         $correctAnswer = $hiddenElementValue;
         global $result;
         $result = checkCalculation($correctAnswer, $answer);
-        @\engine\checkAnswerString($result, $answer, $correctAnswer, $name);
+        @\engine\checkAnswerInt($result, $answer, $correctAnswer, $name);
 }
 
 function checkCalculation(int $expressionResult, string $answer): bool

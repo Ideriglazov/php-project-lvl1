@@ -5,7 +5,7 @@ namespace engine;
 use function cli\line;
 use function cli\prompt;
 
-function greet($gamePath)
+function greet(string $gamePath): void
 {
     $autoloadPath1 = __DIR__ . '/../../../autoload.php';
     $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
