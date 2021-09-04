@@ -54,8 +54,8 @@ CONTENTS OF THIS FILE
  
  
  Brain-prime
- [![asciicast](https://asciinema.org/a/0RmIgJaVFEiqiTvSSC8vnW1lV.svg)](https://asciinema.org/a/0RmIgJaVFEiqiTvSSC8vnW1lV)
+ [![asciicast](https://asciinema.org/a/uySShz4gGlwRF91xyOpQwp3K3.svg)](https://asciinema.org/a/uySShz4gGlwRF91xyOpQwp3K3)
 
  
  Brain-progression
- [![asciicast](https://asciinema.org/a/roylEy2ayHBLSqUrWEQeHUtR7.svg)](https://asciinema.org/a/roylEy2ayHBLSqUrWEQeHUtR7)
+[![asciicast](https://asciinema.org/a/a7fKUMNo6g0INPM0uxDdfz2Ag.svg)](https://asciinema.org/a/a7fKUMNo6g0INPM0uxDdfz2Ag)
