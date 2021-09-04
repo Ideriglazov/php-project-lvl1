@@ -7,17 +7,6 @@ use function cli\prompt;
 
 function brainCalc(string $name): void
 {
-    $autoloadPath1 = __DIR__ . '/../../../autoload.php';
-    $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
-    $autoloadPath3 = __DIR__ . '/../../vendor/autoload.php';
-    if (file_exists($autoloadPath1)) {
-        require_once $autoloadPath1;
-    } elseif (file_exists($autoloadPath2)) {
-        require_once $autoloadPath2;
-    } else {
-        require_once $autoloadPath3;
-    }
-    require_once dirname(__FILE__) . '/../../src/Engine.php';
         line("What is the result of the expression?\n");
         $arrExpression = mathExpression();
         $arrExpression[] = ';';
@@ -37,17 +26,7 @@ function brainCalc(string $name): void
 
 function mathExpression(): array
 {
-    $autoloadPath1 = __DIR__ . '/../../../autoload.php';
-    $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
-    $autoloadPath3 = __DIR__ . '/../../vendor/autoload.php';
-    if (file_exists($autoloadPath1)) {
-        require_once $autoloadPath1;
-    } elseif (file_exists($autoloadPath2)) {
-        require_once $autoloadPath2;
-    } else {
-        require_once $autoloadPath3;
-    }
-    require_once dirname(__FILE__) . '/../../src/Engine.php';
+
     $rand1 = rand(0, 9);
     $rand2 = rand(0, 9);
     $operator = array('*', '+', '-');
@@ -71,17 +50,6 @@ function mathExpression(): array
 
 function checkCalculation(int $expressionResult, string $answer): bool
 {
-    $autoloadPath1 = __DIR__ . '/../../../autoload.php';
-    $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
-    $autoloadPath3 = __DIR__ . '/../../vendor/autoload.php';
-    if (file_exists($autoloadPath1)) {
-        require_once $autoloadPath1;
-    } elseif (file_exists($autoloadPath2)) {
-        require_once $autoloadPath2;
-    } else {
-        require_once $autoloadPath3;
-    }
-    require_once dirname(__FILE__) . '/../../src/Engine.php';
     if ($expressionResult == $answer) {
         return true;
     } else {

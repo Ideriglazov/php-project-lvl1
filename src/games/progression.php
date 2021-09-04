@@ -7,17 +7,6 @@ use function cli\prompt;
 
 function progression(string $name): void
 {
-    $autoloadPath1 = __DIR__ . '/../../../autoload.php';
-    $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
-    $autoloadPath3 = __DIR__ . '/../../vendor/autoload.php';
-    if (file_exists($autoloadPath1)) {
-        require_once $autoloadPath1;
-    } elseif (file_exists($autoloadPath2)) {
-        require_once $autoloadPath2;
-    } else {
-        require_once $autoloadPath3;
-    }
-    require_once dirname(__FILE__) . '/../../src/Engine.php';
         line("What number is missing in the progression?\n");
         $progLength = mt_rand(5, 15);
         $increment = mt_rand(0, 100);
@@ -45,17 +34,6 @@ function progression(string $name): void
 
 function checkCalculation(int $expressionResult, string $answer): bool
 {
-    $autoloadPath1 = __DIR__ . '/../../../autoload.php';
-    $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
-    $autoloadPath3 = __DIR__ . '/../../vendor/autoload.php';
-    if (file_exists($autoloadPath1)) {
-        require_once $autoloadPath1;
-    } elseif (file_exists($autoloadPath2)) {
-        require_once $autoloadPath2;
-    } else {
-        require_once $autoloadPath3;
-    }
-    require_once dirname(__FILE__) . '/../../src/Engine.php';
     if ($expressionResult == $answer) {
         return true;
     } else {
