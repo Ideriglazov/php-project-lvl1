@@ -21,7 +21,7 @@ function brainCalc(string $name): void
         $answer = prompt('Your answer: ');
         global $result;
         $result = checkCalculation($expressionResult, $answer);
-        @\engine\checkAnswerString($result, $answer, $correctAnswer, $name);
+        \engine\checkAnswerString($result, $answer, $correctAnswer, $name);
 }
 
 function mathExpression(): array
