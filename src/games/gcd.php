@@ -15,7 +15,7 @@ function gcd(string $name): void
         $correctAnswer = commonDivisor($num1, $num2);
         global $result;
         $result = checkCalculation($correctAnswer, $answer);
-        @\engine\checkAnswerInt($result, $answer, $correctAnswer, $name);
+        \engine\checkAnswerInt($result, $answer, $correctAnswer, $name);
 }
 
 function commonDivisor(int $num1, int $num2): int

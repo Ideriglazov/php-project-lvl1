@@ -14,7 +14,7 @@ function prime(string $name): void
         $correctAnswer = primeNumber($num);
         global $result;
         $result = checkCalculation($correctAnswer, $answer);
-        @\engine\checkAnswerString($result, $answer, $correctAnswer, $name);
+        \engine\checkAnswerString($result, $answer, $correctAnswer, $name);
 }
 
 function checkCalculation(string $expressionResult, string $answer): bool

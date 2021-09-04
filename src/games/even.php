@@ -14,7 +14,7 @@ function parity(string $name): void
         global $result;
         $result = checkParityBool($num, $answer);
         $correctAnswer = checkParityString($num);
-        @\engine\checkAnswerString($result, $answer, $correctAnswer, $name);
+        \engine\checkAnswerString($result, $answer, $correctAnswer, $name);
 }
 
 function checkParityBool(int $num, string $ans): bool
