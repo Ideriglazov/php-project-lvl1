@@ -2,7 +2,6 @@
 
 namespace engine;
 
-use function Brain\Games\Calc\checkCalculation;
 use function cli\line;
 use function cli\prompt;
 
