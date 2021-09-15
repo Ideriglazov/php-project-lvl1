@@ -2,22 +2,32 @@
 
 namespace engine;
 
+use function Brain\Games\Calc\checkCalculation;
 use function cli\line;
 use function cli\prompt;
 
 function greet(string $gamePath): void
 {
     line('Welcome to the Brain Games!');
-    global $name;
-    global $result;
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     $i = 0;
     while ($i < 3) {
+        $booleanResult = true;
         if (is_callable($gamePath)) {
-            $gamePath($name);
+            $gameData = [];
+            $gameData = $gamePath($name);
+            line($gameData['task']);
+            line('Question: ' . $gameData['question']);
+            $answer = prompt('Your answer: ');
+            if ($answer == $gameData['correctAnswer']) {
+                $booleanResult = true;
+            } else {
+                $booleanResult = false;
+            }
+            checkAnswerString($booleanResult, $answer, $gameData['correctAnswer'], $name);
         }
-        if ($result > 0) {
+        if ($booleanResult == true) {
             $i++;
         } else {
             return;
@@ -35,9 +45,9 @@ function checkAnswerInt(bool $parameter, string $answer, int $correctAnswer, str
             echo "Correct!\n";
     }
 }
-function checkAnswerString(bool $parameter, string $answer, string $correctAnswer, string $name): void
+function checkAnswerString(bool $booleanResult, string $answer, string $correctAnswer, string $name): void
 {
-    if (!$parameter) {
+    if (!$booleanResult) {
         echo "'$answer' is wrong answer ;(. Correct answer was $correctAnswer. Let's try again, $name!\n";
     } else {
         echo "Correct!\n";

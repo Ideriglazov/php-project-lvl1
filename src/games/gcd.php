@@ -2,20 +2,19 @@
 
 namespace Brain\Games\gcd;
 
+use function Brain\Games\Even\checkParityString;
 use function cli\line;
 use function cli\prompt;
 
-function gcd(string $name): void
+function gcd(string $name): array
 {
-        line("Find the greatest common divisor of given numbers.\n");
-        $num1 = mt_rand(0, 1000);
-        $num2 = mt_rand(0, 1000);
-        echo "Question: " . $num1 . ' ' . $num2 . "\n";
-        $answer = prompt('Your answer: ');
-        $correctAnswer = commonDivisor($num1, $num2);
-        global $result;
-        $result = checkCalculation($correctAnswer, $answer);
-        \engine\checkAnswerInt($result, $answer, $correctAnswer, $name);
+    $num1 = mt_rand(0, 1000);
+    $num2 = mt_rand(0, 1000);
+    $gameData = [];
+    $gameData['task'] = "Find the greatest common divisor of given numbers.\n";
+    $gameData['question'] = $num1 . ' ' . $num2 . "\n";
+    $gameData['correctAnswer'] = commonDivisor($num1, $num2);
+    return $gameData;
 }
 
 function commonDivisor(int $num1, int $num2): int

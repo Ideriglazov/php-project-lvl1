@@ -2,19 +2,18 @@
 
 namespace Brain\Games\Prime;
 
+use function Brain\Games\gcd\commonDivisor;
 use function cli\line;
 use function cli\prompt;
 
-function prime(string $name): void
+function prime(string $name): array
 {
-        line("Answer \"yes\" if given number is prime. Otherwise answer \"no\".\n");
-        $num = mt_rand(0, 1000);
-        echo "Question: " . $num . "\n";
-        $answer = prompt('Your answer: ');
-        $correctAnswer = primeNumber($num);
-        global $result;
-        $result = checkCalculation($correctAnswer, $answer);
-        \engine\checkAnswerString($result, $answer, $correctAnswer, $name);
+    $num = mt_rand(0, 1000);
+    $gameData = [];
+    $gameData['task'] = "Answer \"yes\" if given number is prime. Otherwise answer \"no\".\n";
+    $gameData['question'] = $num . "\n";
+    $gameData['correctAnswer'] = primeNumber($num);
+    return $gameData;
 }
 
 function checkCalculation(string $expressionResult, string $answer): bool

@@ -5,16 +5,14 @@ namespace Brain\Games\Even;
 use function cli\line;
 use function cli\prompt;
 
-function parity(string $name): void
+function parity(string $name): array
 {
-    line("Answer \"yes\" if the number is even, otherwise answer \"no\".\n");
-        $num = mt_rand();
-        echo "Question: " . $num . "\n";
-        $answer = prompt('Your answer: ');
-        global $result;
-        $result = checkParityBool($num, $answer);
-        $correctAnswer = checkParityString($num);
-        \engine\checkAnswerString($result, $answer, $correctAnswer, $name);
+    $num = mt_rand();
+    $gameData = [];
+    $gameData['task'] = "Answer \"yes\" if the number is even, otherwise answer \"no\".\n";
+    $gameData['question'] = $num . "\n";
+    $gameData['correctAnswer'] = checkParityString($num);
+    return $gameData;
 }
 
 function checkParityBool(int $num, string $ans): bool
