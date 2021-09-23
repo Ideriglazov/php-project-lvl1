@@ -10,6 +10,4 @@ if (file_exists($autoloadPath1)) {
 } else {
     require_once $autoloadPath3;
 }
-require_once dirname(__FILE__).'/../src/Engine.php';
-require_once dirname(__FILE__).'/../src/games/gcd.php';
 \engine\greet('Brain\Games\gcd\gcd');

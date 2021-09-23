@@ -20,7 +20,13 @@
         "wp-cli/php-cli-tools": "^0.11.13"
     },
      "autoload": {
-        "files": ["src/Cli.php"]
+        "files": ["src/Cli.php",
+          "src/Engine.php",
+          "src/games/calc.php",
+          "src/games/even.php",
+          "src/games/gcd.php",
+          "src/games/prime.php",
+          "src/games/progression.php"]
          },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.6"
