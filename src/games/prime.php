@@ -25,21 +25,6 @@ function play(): void
             $gameData['correctAnswer'] = 'yes';
         }
         return $gameData;
-        function primeNumber(int $num): string
-        {
-            $v = 1;
-            for ($i = 2; $i <= $num / 2; $i++) {
-                $v = $num % $i;
-                if ($v == 0) {
-                    break;
-                }
-            }
-            if ($v == 0 || $num == 1) {
-                return 'no';
-            } else {
-                return 'yes';
-            }
-        }
     };
     \engine\greet($brainPrime);
 }
