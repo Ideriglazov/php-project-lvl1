@@ -2,7 +2,6 @@
 
 namespace Brain\Games\Prime;
 
-use function Brain\Games\gcd\commonDivisor;
 use function cli\line;
 use function cli\prompt;
 

@@ -2,7 +2,6 @@
 
 namespace Brain\Games\gcd;
 
-use function Brain\Games\Even\checkParityString;
 use function cli\line;
 use function cli\prompt;
 

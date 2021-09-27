@@ -2,7 +2,6 @@
 
 namespace Brain\Games\Progression;
 
-use function Brain\Games\Prime\primeNumber;
 use function cli\line;
 use function cli\prompt;
 
