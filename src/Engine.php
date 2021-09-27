@@ -5,8 +5,9 @@ namespace engine;
 use function cli\line;
 use function cli\prompt;
 
-function greet($gameName): void
+function greet(object $gameName): void
 {
+    var_dump($gameName);
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
