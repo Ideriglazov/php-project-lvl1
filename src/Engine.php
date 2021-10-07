@@ -7,7 +7,6 @@ use function cli\prompt;
 
 function greet(object $gameName): void
 {
-    var_dump($gameName);
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
@@ -24,7 +23,12 @@ function greet(object $gameName): void
             } else {
                 $booleanResult = false;
             }
-            checkAnswerString($booleanResult, $answer, $gameData['correctAnswer'], $name);
+            $correctAnswer = $gameData['correctAnswer'];
+            if (!$booleanResult) {
+                echo "'$answer' is wrong answer ;(. Correct answer was $correctAnswer. Let's try again, $name!\n";
+            } else {
+                echo "Correct!\n";
+            }
         }
         if ($booleanResult == true) {
             $i++;
@@ -34,13 +38,5 @@ function greet(object $gameName): void
     }
     if ($i == 3) {
         echo "Congratulations, " . $name . "!\n";
-    }
-}
-function checkAnswerString(bool $booleanResult, string $answer, string $correctAnswer, string $name): void
-{
-    if (!$booleanResult) {
-        echo "'$answer' is wrong answer ;(. Correct answer was $correctAnswer. Let's try again, $name!\n";
-    } else {
-        echo "Correct!\n";
     }
 }
